@@ -1,0 +1,27 @@
+{
+  "dir": "ltr",
+  "lang": "sv",
+  "name": "Svensk kod & film AB",
+  "scope": "./",
+  "display": "fullscreen",
+  "start_url": "./",
+  "short_name": "SK&FAB",
+  "theme_color": "#ffffff",
+  "description": "Svensk kod & film AB | software, hardware, special photo",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "icons": [{
+    "src": "./apple-touch-icon.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }, {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },{
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
