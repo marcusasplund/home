@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="sv" id="kodofilm.se">
+<html lang="sv" id="kodofilm.se" class="wf-loading">
   <head>
     <meta charset="utf-8">
     <title>Svensk Kod & Film AB</title>
@@ -27,19 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
     <link rel="stylesheet" href="/app.css">
-    <script>
-     // IE polyfills
-      if (!Promise) {
-        var promisePoly = document.createElement('script');
-        promisePoly.src = '/promise.min.js'
-        document.head.appendChild(promisePoly)
-      }
-      if (!Object.assign) {
-        var assignPoly = document.createElement('script')
-        assignPoly.src = '/object-assign-auto.min.js'
-        document.head.appendChild(assignPoly)
-      }
-  </script>
+    <script src='shims.js' async></script>
   </head>
   <body class="mdc-typography mdc-theme--background">
     <div class="content">
@@ -53,36 +41,8 @@
             </div>
           </header>
         </div>
-    <script src="/index.js" async></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-        .then(function (registration) {
-          console.log('Service Worker registration successful with scope: ',
-          registration.scope)
-        })
-        .catch(function (err) {
-          console.log('Service Worker registration failed: ', err)
-        })
-      }
-    </script>
-    <script>
-      (function(d) {
-        var config = {
-          kitId: 'bxw0lar',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
+    <script async src="/index.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113012290-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-113012290-2');
-    </script>
+    <script async src="/inlines.js"></script>
   </body>
 </html>
