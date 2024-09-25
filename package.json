@@ -52,6 +52,6 @@
     "@material/toolbar": "^0.29.0",
     "@material/typography": "^0.28.0",
     "hyperapp": "^1.0.2",
-    "hyperapp-transitions": "^0.9.2"
+    "hyperapp-transitions": "^0.10.0"
   }
 }
